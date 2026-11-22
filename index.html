@@ -4,147 +4,140 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mahmud Hasan – Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F2F7F4; --surface:#E4EEE9; --ink:#10201A; --muted:#4A5F57; --green:#006A4E; --red:#E0293F; --line:#C5D6CE;
-  --head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --body:"Literata",Georgia,"Times New Roman",serif;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){--bg:#0D1814; --surface:#15251F; --ink:#E8F1ED; --muted:#9DB3AA; --green:#3DBE96; --red:#FF5468; --line:#26403A; color-scheme:dark}
-}
-:root[data-theme="dark"]{--bg:#0D1814; --surface:#15251F; --ink:#E8F1ED; --muted:#9DB3AA; --green:#3DBE96; --red:#FF5468; --line:#26403A; color-scheme:dark}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.7}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
-.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
-
-header.nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font-family:var(--head);font-weight:500}
-header.nav nav{display:flex;gap:1.5rem}
-header.nav a{text-decoration:none;color:var(--muted)}
-header.nav a:hover{color:var(--ink)}
-
-.hero{padding:4rem 0 5rem}
-.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(3.2rem,12vw,8.5rem);line-height:.92;letter-spacing:-.035em;margin:0 0 2rem}
-.hero h1 .dot{display:inline-block;width:.16em;height:.16em;background:var(--red);border-radius:50%;margin-left:.06em;vertical-align:baseline}
-.hero p{max-width:34rem;font-size:1.25rem;color:var(--muted);margin:0 0 2rem}
-.btn{display:inline-block;font-family:var(--head);font-weight:500;background:var(--green);color:#fff;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none}
-:root[data-theme="dark"] .btn{color:#06130E}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#06130E}}
-.btn:hover{filter:brightness(1.1)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);margin-left:.5rem}
-
-section{padding:4rem 0;border-top:1px solid var(--line)}
-section h2{font-family:var(--head);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin:0 0 1.5rem;line-height:1.1}
-.about{display:grid;grid-template-columns:1fr 1.6fr;gap:2.5rem}
-.about p{margin:0 0 1rem;max-width:40rem}
-.facts{margin:0;padding:0;list-style:none;font-family:var(--head)}
-.facts li{padding:.7rem 0;border-bottom:1px solid var(--line)}
-.facts span{display:block;color:var(--muted);font-size:.9rem}
-
-.projects{display:grid;gap:1.25rem}
-.project{background:var(--surface);border-radius:1.25rem;padding:1.75rem;display:grid;gap:.5rem}
-.project h3{font-family:var(--head);font-weight:800;font-size:1.4rem;margin:0}
-.project p{margin:0;color:var(--muted);max-width:42rem}
-.project .tags{font-family:var(--head);font-size:.9rem;color:var(--green);font-weight:500}
-
-.contact p{max-width:34rem;color:var(--muted)}
-.contact .mail{font-family:var(--head);font-weight:800;font-size:clamp(1.4rem,4vw,2.2rem);color:var(--green);word-break:break-all}
-.socials{list-style:none;margin:1.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.7rem;font-family:var(--head)}
-.socials a{display:inline-block;border:1.5px solid var(--line);padding:.5rem 1rem;border-radius:999px;text-decoration:none;font-weight:500}
-.socials a:hover{background:var(--green);color:#fff;border-color:var(--green)}
-footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-
-@media (max-width:720px){
-  .about{grid-template-columns:1fr}
-  .btn.ghost{margin:.75rem 0 0}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0A0F0A;--card:#161D16;--neon:#BFFF00;--green:#8FE000;--muted:#A8B5A8;--line:#2A332A}
+body{background:var(--bg);color:#fff;font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+#loader{position:fixed;inset:0;background:#000;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .5s,visibility .5s}
+#loader.hide{opacity:0;visibility:hidden}
+#loadNum{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(4rem,18vw,7rem);color:var(--neon);line-height:1;letter-spacing:-.04em}
+#loadBar{width:min(320px,70vw);height:8px;background:#222;border-radius:999px;overflow:hidden}
+#loadFill{height:100%;width:0%;background:linear-gradient(90deg,#BFFF00,#4ADE80);border-radius:999px}
+#loadText{color:#888;font-size:.9rem}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:0;background:rgba(10,15,10,.9);backdrop-filter:blur(10px);z-index:10;border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-.02em}
+.logo i{color:var(--neon);font-style:normal}
+.nav nav{display:flex;gap:1.2rem;font-size:.85rem;color:var(--muted)}
+.nav nav a:hover{color:#fff}
+.hero{padding:2.5rem 0 1rem;text-align:center}
+.hero .top{letter-spacing:.3em;font-size:.75rem;color:#ddd;text-transform:uppercase}
+.hero h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(3.5rem,15vw,7.5rem);line-height:.9;letter-spacing:-.04em;background:linear-gradient(180deg,#D9FF6A,#5AC800);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:.5rem 0 1.2rem}
+.hero-photo{width:min(320px,75vw);aspect-ratio:1/1.15;object-fit:cover;object-position:top;border-radius:1.5rem;margin:0 auto;box-shadow:0 0 0 1px rgba(191,255,0,.3),0 0 80px rgba(191,255,0,.35);background:#222;display:block}
+.hero h2{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(2.5rem,11vw,4.5rem);line-height:.95;margin:1.5rem 0 .5rem;text-align:left}
+.hero h2 span{color:var(--neon);font-size:1.2em}
+.hero h2 small{display:block;font-size:1.2rem;color:#fff;font-weight:400}
+.badge{display:inline-block;background:#E8FF9A;color:#111;font-weight:700;font-size:.8rem;padding:.4rem .9rem;border-radius:999px;margin:1rem 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:1.25rem;padding:1.25rem;margin-top:1rem}
+.card h3{font-size:1rem;margin-bottom:.5rem}
+.card p{color:var(--muted);font-size:.95rem}
+.tags{list-style:none;margin-top:1rem;display:grid;gap:.4rem;font-size:.95rem}
+.tags li::before{content:"✦ ";color:var(--neon)}
+.btn{display:inline-block;background:var(--neon);color:#111;font-weight:700;padding:.8rem 1.5rem;border-radius:999px;margin-top:1rem}
+section{padding:2.5rem 0}
+section h2{font-family:"Bricolage Grotesque",sans-serif;font-size:2rem;margin-bottom:1rem;text-align:center}
+.info{display:grid;gap:.8rem}
+.info div{background:var(--card);border-left:4px solid var(--neon);border-radius:.9rem;padding:1rem 1.2rem}
+.info small{color:var(--muted);display:block;font-size:.85rem}
+.info b{font-size:1.1rem}
+.pill{display:inline-block;background:var(--neon);color:#111;font-weight:700;padding:.6rem 1.2rem;border-radius:999px;font-size:.9rem;margin-top:1rem}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.photos img{width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:1rem;background:#222}
+.place{background:var(--card);border-left:4px solid var(--neon);border-radius:1rem;padding:1.2rem;margin-bottom:.8rem}
+.place b{font-size:1.1rem}
+.place p{color:var(--muted);font-size:.95rem}
+.work{background:var(--card);border-left:4px solid var(--neon);border-radius:1rem;padding:1.2rem;margin-bottom:.8rem}
+.work span{font-size:1.8rem}
+.contact-card{background:var(--card);border-left:4px solid var(--neon);border-radius:1rem;padding:1.2rem;margin-bottom:.8rem;display:block}
+.contact-card small{color:var(--neon);font-size:.85rem}
+.contact-card b{font-size:1.2rem;display:block}
+.contact-card p{color:var(--muted)}
+.socials{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.socials a{background:#222;border:1px solid var(--line);padding:.6rem 1rem;border-radius:999px;font-size:.9rem}
+footer{text-align:center;padding:2rem 0;color:var(--muted)}
+footer b{color:var(--neon);font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;display:block}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="nav">
-    <span>Mahmud Hasan</span>
-    <nav aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <div class="hero">
-      <h1>Mahmud Hasan<span class="dot" aria-hidden="true"></span></h1>
-      <p>I’m a Digital Marketing Specialist from Bangladesh. I am a highly motivated undergraduate and IELTS candidate, passionate about creating clear, impactful and results-driven digital experiences.</p>
-      <a class="btn" href="#work">See my work</a>
-      <a class="btn ghost" href="#contact">Get in touch</a>
-    </div>
-
-    <section id="about">
-      <div class="about">
-        <div>
-          <h2>About me</h2>
-          <ul class="facts">
-            <li><span>Based in</span>Dhanmondi, Dhaka, Bangladesh</li>
-            <li><span>Hometown</span>Dhonpatikhola, Bangara, Cumilla</li>
-            <li><span>Focus</span>Digital Marketing, SEO & Social Media Growth</li>
-            <li><span>Age</span>21 Years Old</li>
-          </ul>
-        </div>
-        <div>
-          <p>I am Mahmud Hasan, a highly motivated and ambitious 21-year-old from Bangladesh. Having successfully completed my HSC with distinction, I am currently pursuing my Honours degree at university while simultaneously building a promising career in Digital Marketing.</p>
-          <p>Moreover, I am diligently preparing for the IELTS examination to broaden my academic and professional horizons globally. I am deeply passionate about continuous learning, strategic thinking, and creating impactful digital experiences that truly resonate with audiences.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-      <h2>Selected work</h2>
-      <div class="projects">
-        <article class="project">
-          <h3>Facebook Ads & Brand Growth</h3>
-          <p>Planned and managed targeted Facebook ad campaigns to increase brand visibility, engagement and sales for local businesses.</p>
-          <span class="tags">Facebook Ads, Meta Business Suite, 2025</span>
-        </article>
-        <article class="project">
-          <h3>Social Media Content Strategy</h3>
-          <p>Created compelling content strategies for Instagram and TikTok to build a strong online presence and grow a loyal audience.</p>
-          <span class="tags">Content Strategy, Instagram, TikTok, 2025</span>
-        </article>
-        <article class="project">
-          <h3>SEO & Digital Presence</h3>
-          <p>Optimized pages and profiles with SEO-friendly content and keywords to improve search visibility and organic reach.</p>
-          <span class="tags">SEO, Keyword Research, Digital Marketing, 2026</span>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Let’s talk</h2>
-      <p>Have a project, a question, or an opportunity? Send me an email or message me on WhatsApp and I’ll reply soon.</p>
-      <a class="mail" href="mailto:mahmudh5667@gmail.com">mahmudh5667@gmail.com</a>
-      <ul class="socials">
-        <li><a href="https://wa.me/8801311393997" target="_blank">WhatsApp</a></li>
-        <li><a href="https://www.facebook.com/mahmud4393" target="_blank">Facebook Profile</a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100084525769316" target="_blank">Facebook Page</a></li>
-        <li><a href="https://www.instagram.com/mahmud__hasan1/" target="_blank">Instagram</a></li>
-        <li><a href="https://t.me/mahmud_34" target="_blank">Telegram</a></li>
-        <li><a href="https://www.tiktok.com/@mahmud.verse" target="_blank">TikTok</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>© <span id="y">2026</span> Mahmud Hasan</footer>
+<div id="loader">
+  <div id="loadNum">0%</div>
+  <div id="loadBar"><div id="loadFill"></div></div>
+  <div id="loadText">Loading Mahmud's portfolio...</div>
 </div>
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<header><div class="wrap nav"><div class="logo">MAHMUD<i>.</i></div><nav><a href="#about">About</a><a href="#photos">Photos</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+<div class="wrap">
+  <div class="hero">
+    <div class="top">Student & Digital Marketer</div>
+    <h1>PORTFOLIO</h1>
+    <img class="hero-photo" src="mahmud.jpeg" alt="Mahmud Hasan">
+    <h2><small>Hi I am</small><span>Mahmud</span> Hasan</h2>
+    <div style="text-align:left">
+      <div class="card">
+        <h3>Personal Summary</h3>
+        <p>I'm Mahmud, a 21-year-old Digital Marketing Specialist from Bangladesh. I live in Dhanmondi, Dhaka and my village home is in Dhonpatikhola, Bangara, Cumilla. I love creating brands and growing businesses online.</p>
+        <ul class="tags">
+          <li>Digital Marketing</li>
+          <li>Facebook Ads & SEO</li>
+          <li>Honours Student</li>
+          <li>From Dhaka, Bangladesh</li>
+          <li>Proud Bengali</li>
+        </ul>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+      <span class="badge">Class: Honours Student</span>
+    </div>
+  </div>
+  <section id="about">
+    <h2>About me</h2>
+    <p style="text-align:center;color:var(--muted)">I am a highly motivated undergraduate and IELTS candidate. I love learning, strategic thinking, and building impactful digital experiences.</p>
+    <div class="info" style="margin-top:1.2rem">
+      <div><small>I study in</small><b>Honours - University</b></div>
+      <div><small>My age</small><b>21 Years Old</b></div>
+      <div><small>My hometown</small><b>Dhonpatikhola, Bangara, Cumilla</b></div>
+      <div><small>I am</small><b>Bengali 🇧🇩</b></div>
+    </div>
+    <div style="text-align:center"><span class="pill">IELTS Candidate • Future Global Citizen 🚀</span></div>
+  </section>
+  <section id="photos">
+    <h2>My photos</h2>
+    <div class="photos">
+      <img src="mahmud.jpeg" alt="Mahmud 1">
+      <img src="mahmud1.jpeg" alt="Mahmud 2">
+      <img src="mahmud2.jpeg" alt="Mahmud 3">
+      <img src="mahmud3.jpeg" alt="Mahmud 4">
+    </div>
+  </section>
+  <section>
+    <h2>Where I'm from</h2>
+    <div class="place"><b>🏙️ I live in Dhaka</b><p>Dhanmondi, Dhaka, Bangladesh is the city where I live and work.</p></div>
+    <div class="place"><b>🌾 My village home</b><p>Dhonpatikhola, Bangara Upazila, Cumilla District, Chattogram Division.</p></div>
+  </section>
+  <section id="skills">
+    <h2>What I do</h2>
+    <div class="work"><span>📈</span><br><b>Facebook Ads & Brand Growth</b><p>I plan targeted ad campaigns to increase visibility, engagement and sales.</p></div>
+    <div class="work"><span>🎬</span><br><b>Social Media Content Strategy</b><p>I create content strategies for Instagram and TikTok to grow a loyal audience.</p></div>
+    <div class="work"><span>🇧🇩</span><br><b>Proud Bengali</b><p>I'm a Bengali from Bangladesh. Dhaka is my city and Cumilla is my village home.</p></div>
+  </section>
+  <section id="contact">
+    <h2>Contact me</h2>
+    <a class="contact-card" href="https://wa.me/8801311393997"><small>Tap to open</small><b>💬 WhatsApp</b><p>01311-393997</p></a>
+    <a class="contact-card" href="mailto:mahmudh5667@gmail.com"><small>Tap to open</small><b>✉️ Email</b><p>mahmudh5667@gmail.com</p></a>
+    <a class="contact-card" href="https://www.facebook.com/mahmud4393"><small>Tap to open</small><b>👤 Facebook</b><p>Mahmud Hasan</p></a>
+    <a class="contact-card" href="https://www.instagram.com/mahmud__hasan1/"><small>Tap to open</small><b>📸 Instagram</b><p>@mahmud__hasan1</p></a>
+    <a class="contact-card" href="https://t.me/mahmud_34"><small>Tap to open</small><b>✈️ Telegram</b><p>@mahmud_34</p></a>
+    <a class="contact-card" href="https://www.tiktok.com/@mahmud.verse"><small>Tap to open</small><b>🎵 TikTok</b><p>@mahmud.verse</p></a>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=100084525769316">Facebook Page</a>
+    </div>
+  </section>
+</div>
+<footer><b>MAHMUD</b>Made by Mahmud Hasan, 2026</footer>
+<script>
+let n=0; let el=document.getElementById('loadNum'); let fill=document.getElementById('loadFill');
+let t=setInterval(()=>{ n+=Math.floor(Math.random()*12)+4; if(n>=100){n=100; clearInterval(t); setTimeout(()=>{document.getElementById('loader').classList.add('hide')},400);} el.textContent=n+'%'; fill.style.width=n+'%'; },60);
+</script>
 </body>
 </html>
